@@ -23,7 +23,13 @@ const seedDB = async () => {
             location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
             title: `${seedHelpers.descriptors[Math.floor(Math.random() * seedHelpers.descriptors.length)]} ${seedHelpers.places[Math.floor(Math.random() * seedHelpers.places.length)]}`,
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            image: `https://picsum.photos/400?random=${Math.random()}`,
+            images: [
+                {
+                url: 'https://res.cloudinary.com/do0yfnt73/image/upload/v1768663580/YelpCamp/jebjnjanplc3plakobvb.jpg',
+                filename: 'YelpCamp/jebjnjanplc3plakobvb'
+                }
+  ],
+           
         });
         await camp.save();
         };
