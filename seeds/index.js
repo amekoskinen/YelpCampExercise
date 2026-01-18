@@ -21,6 +21,13 @@ const seedDB = async () => {
             author: '6968b9941189404708b03bac',
             price: `${Math.floor(Math.random() * 20) + 10}`,
             location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
+            geometry: {
+                type: "Point",
+                coordinates: [
+                    cities[rand1000].longitude,
+                    cities[rand1000].latitude,
+                ]
+            },
             title: `${seedHelpers.descriptors[Math.floor(Math.random() * seedHelpers.descriptors.length)]} ${seedHelpers.places[Math.floor(Math.random() * seedHelpers.places.length)]}`,
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             images: [
