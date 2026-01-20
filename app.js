@@ -24,7 +24,7 @@ const reviewRoutes = require('./routes/reviews');
 
 const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
 
-mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect(dbURL);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
